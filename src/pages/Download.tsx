@@ -18,7 +18,7 @@ const steps = [
   {
     number: "01",
     title: "Download",
-    description: "Get the installer for Windows. No registration required."
+      description: "Get the installer for your platform. No registration required."
   },
   {
     number: "02",
@@ -49,27 +49,30 @@ const Download = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8">
                 <Monitor className="w-4 h-4 text-primary-foreground" />
                 <span className="text-primary-foreground/90 text-sm font-medium">
-                  Windows Desktop Application
-                </span>
-              </div>
-              
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-                Download Rxio Pharma
-              </h1>
-              <p className="text-xl text-primary-foreground/80 mb-10">
-                Try the complete software free. Explore every feature, no credit card required, no time limits.
-              </p>
-              
-              <Button asChild variant="accent" size="xl" className="group">
-                <a href="#">
-                  <DownloadIcon className="w-5 h-5 group-hover:animate-bounce" />
-                  Download Free Demo
-                </a>
-              </Button>
-              
-              <p className="text-primary-foreground/60 text-sm mt-4">
-                Version 1.0 • Windows 10 or later • ~150 MB
-              </p>
+                    Multi-Platform Desktop Application
+                  </span>
+                </div>
+                
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
+                  Download Rxio Pharma
+                </h1>
+                <p className="text-xl text-primary-foreground/80 mb-4">
+                  Try the complete software free. Explore every feature, no credit card required, no time limits.
+                </p>
+                <p className="text-lg text-primary-foreground/70 mb-10 italic">
+                  This app is available for all platforms: Linux, Mac, and Windows.
+                </p>
+                
+                <Button asChild variant="accent" size="xl" className="group">
+                  <a href="#">
+                    <DownloadIcon className="w-5 h-5 group-hover:animate-bounce" />
+                    Download Now
+                  </a>
+                </Button>
+                
+                <p className="text-primary-foreground/60 text-sm mt-4">
+                  Version 1.0 • ~150 MB • Multi-platform support
+                </p>
             </div>
           </div>
         </section>
