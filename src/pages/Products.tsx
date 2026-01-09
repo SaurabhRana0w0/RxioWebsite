@@ -1,5 +1,7 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Check, Shield, Zap, TrendingUp, Monitor, ArrowRight, Sparkles, Package, ClipboardList, Clock, BarChart3, Receipt } from "lucide-react";
 
 const features = [

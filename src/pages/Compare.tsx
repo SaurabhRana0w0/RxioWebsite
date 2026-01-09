@@ -1,5 +1,6 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
+import { Link } from "react-router-dom";
 import { Check, X, Shield, Zap, TrendingUp, HelpCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

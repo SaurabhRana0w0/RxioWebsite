@@ -1,5 +1,7 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Check, Info, Shield, Zap, ArrowRight, HelpCircle } from "lucide-react";
 
 const faqs = [

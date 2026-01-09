@@ -1,6 +1,35 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Shield, Zap, TrendingUp, Heart, CheckCircle2, ArrowRight } from "lucide-react";
+
+const reasons = [
+  {
+    icon: Shield,
+    title: "True Ownership",
+    description: "When you buy Rxio, you own it. No recurring subscriptions, no rented access. It's yours forever.",
+    points: ["One-time payment", "Lifetime license", "No monthly fees"]
+  },
+  {
+    icon: Zap,
+    title: "Native Performance",
+    description: "Built with high-performance native technologies. Fast, responsive, and efficient software that runs locally.",
+    points: ["C++ powered", "Zero browser lag", "Instant load times"]
+  },
+  {
+    icon: TrendingUp,
+    title: "Business Stability",
+    description: "Your tools shouldn't stop working if your internet does. Rxio is offline-first for maximum reliability.",
+    points: ["Works without internet", "Local data storage", "No cloud dependency"]
+  },
+  {
+    icon: Heart,
+    title: "Indian Focused",
+    description: "Designed specifically for the unique needs of Indian businesses, starting with pharmacy owners.",
+    points: ["GST compliant", "Local support team", "Simplified workflows"]
+  }
+];
 
 const WhyRxio = () => {
   return (
