@@ -32,10 +32,13 @@ const Index = () => {
   ];
 
   const navLinks = [
-    { label: "Why Rxio", href: "#" },
-    { label: "Products", href: "#" },
-    { label: "Pricing", href: "#" },
-    { label: "Download", href: "#" },
+    { label: "Why Rxio", href: "/why-rxio" },
+    { label: "Products", href: "/products" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Download", href: "/download" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+    { label: "Compare", href: "/compare" },
   ];
 
   return (

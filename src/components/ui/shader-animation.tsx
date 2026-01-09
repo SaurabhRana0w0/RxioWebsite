@@ -34,20 +34,26 @@ export function ShaderAnimation() {
       uniform vec2 resolution;
       uniform float time;
 
-      void main(void) {
-        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-        float t = time*0.05;
-        float lineWidth = 0.002;
+        void main(void) {
+          vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+          float t = time*0.05;
+          float lineWidth = 0.002;
 
-        vec3 color = vec3(0.0);
-        for(int j = 0; j < 3; j++){
-          for(int i=0; i < 5; i++){
-            color[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.01)*5.0 - length(uv) + mod(uv.x+uv.y, 0.2));
+          vec3 color = vec3(0.0);
+          for(int j = 0; j < 3; j++){
+            for(int i=0; i < 5; i++){
+              color[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.01)*5.0 - length(uv) + mod(uv.x+uv.y, 0.2));
+            }
           }
+          
+          // Light mode: High brightness background with subtle patterns
+          vec3 lightBackground = vec4(0.98, 0.98, 1.0, 1.0).rgb;
+          vec3 patterns = color * 0.2; // Scale down the intensity
+          vec3 finalColor = mix(lightBackground, vec3(0.145, 0.388, 0.922), length(patterns)); // Mix with Rxio Blue
+          
+          gl_FragColor = vec4(finalColor, 1.0);
         }
-        
-        gl_FragColor = vec4(color[0],color[1],color[2],1.0);
-      }
+
     `
 
     // Initialize Three.js scene
@@ -135,7 +141,7 @@ export function ShaderAnimation() {
       ref={containerRef}
       className="w-full h-screen"
       style={{
-        background: "#000",
+        background: "#fff",
         overflow: "hidden",
       }}
     />

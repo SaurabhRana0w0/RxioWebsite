@@ -1,4 +1,4 @@
-'use client';
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -12,19 +12,19 @@ export function Header() {
 	const links = [
 		{
 			label: 'Why Rxio',
-			href: '#',
+			href: '/why-rxio',
 		},
 		{
 			label: 'Products',
-			href: '#',
+			href: '/products',
 		},
 		{
 			label: 'Pricing',
-			href: '#',
+			href: '/pricing',
 		},
 		{
 			label: 'Download',
-			href: '#',
+			href: '/download',
 		},
 	];
 
@@ -65,9 +65,9 @@ export function Header() {
 				<WordmarkIcon className="h-4 text-[#2563EB]" />
 				<div className="hidden items-center gap-2 md:flex">
 					{links.map((link, i) => (
-						<a key={i} className={buttonVariants({ variant: 'ghost' })} href={link.href}>
+						<Link key={i} className={buttonVariants({ variant: 'ghost' })} to={link.href}>
 							{link.label}
-						</a>
+						</Link>
 					))}
 					<Button variant="outline">Sign In</Button>
 					<Button className="bg-[#2563EB] hover:bg-[#2563EB]/90">Get Started</Button>
@@ -92,16 +92,17 @@ export function Header() {
 				>
 					<div className="grid gap-y-2">
 						{links.map((link) => (
-							<a
+							<Link
 								key={link.label}
 								className={buttonVariants({
 									variant: 'ghost',
 									className: 'justify-start',
 								})}
-								href={link.href}
+								to={link.href}
+								onClick={() => setOpen(false)}
 							>
 								{link.label}
-							</a>
+							</Link>
 						))}
 					</div>
 					<div className="flex flex-col gap-2">
