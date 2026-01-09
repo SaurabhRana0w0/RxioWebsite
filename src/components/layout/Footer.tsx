@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, MapPin, Phone } from "lucide-react";
+import { Heart, Mail, MapPin, Phone, Facebook, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,6 +19,29 @@ const Footer = () => {
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               High-performance, offline-first software built for businesses that value ownership, stability, and control.
             </p>
+            <div className="flex items-center gap-4 pt-2">
+              <a
+                href="#"
+                className="w-8 h-8 rounded-full bg-primary-foreground/5 flex items-center justify-center text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary/20 transition-all"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="w-8 h-8 rounded-full bg-primary-foreground/5 flex items-center justify-center text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary/20 transition-all"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="w-8 h-8 rounded-full bg-primary-foreground/5 flex items-center justify-center text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary/20 transition-all"
+                aria-label="Youtube"
+              >
+                <Youtube className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
