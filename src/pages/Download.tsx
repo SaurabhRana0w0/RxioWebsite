@@ -17,8 +17,8 @@ import {
 const steps = [
   {
     number: "01",
-    title: "Download",
-      description: "Get the installer for your platform. No registration required."
+    title: "Downloads",
+    description: "Get the installer for your platform. No registration required."
   },
   {
     number: "02",
@@ -27,13 +27,13 @@ const steps = [
   },
   {
     number: "03",
-    title: "Explore",
-    description: "Test every feature with sample data."
+    title: "Purchase",
+    description: "Get your lifetime license when you're ready."
   },
   {
     number: "04",
-    title: "Purchase",
-    description: "Get a lifetime license when you're ready."
+    title: "Own it",
+    description: "It's yours forever with no recurring fees."
   }
 ];
 
@@ -95,10 +95,10 @@ const Download = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {steps.map((step, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-card rounded-xl p-6 shadow-soft border border-border h-full">
-                    <span className="font-display text-4xl font-bold text-primary/20 mb-4 block">
-                      {step.number}
-                    </span>
+                    <div className="bg-card rounded-xl p-6 shadow-soft border border-border h-full">
+                      <span className="font-display text-4xl font-bold text-primary/40 mb-4 block">
+                        {step.number}
+                      </span>
                     <h3 className="font-display font-semibold text-lg text-foreground mb-3">
                       {step.title}
                     </h3>
