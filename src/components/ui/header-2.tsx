@@ -62,36 +62,58 @@ export function Header() {
 	return (
 		<header
 			className={cn(
-				'sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-transparent md:rounded-md md:border md:transition-all md:ease-out',
-				{
-					'bg-background/95 supports-[backdrop-filter]:bg-background/50 border-border backdrop-blur-lg md:top-4 md:max-w-4xl md:shadow':
-						scrolled && !open,
-					'bg-background/90': open,
-				},
+				'sticky top-0 z-50 mx-auto w-full transition-all duration-300 ease-in-out',
+				scrolled ? 'md:top-4' : 'md:top-0'
 			)}
 		>
-			<nav
-				className={cn(
-					'flex h-14 w-full items-center justify-between px-4 md:h-12 md:transition-all md:ease-out',
-					{
-						'md:px-2': scrolled,
-					},
-				)}
-			>
-				<WordmarkIcon className="h-4 text-[#2563EB]" />
-				<div className="hidden items-center gap-2 md:flex">
-					{links.map((link, i) => (
-						<Link key={i} className={buttonVariants({ variant: 'ghost' })} to={link.href}>
-							{link.label}
-						</Link>
-					))}
-					<Button className="bg-[#2563EB] hover:bg-[#2563EB]/90">Try it now</Button>
-				</div>
-				<Button size="icon" variant="outline" onClick={() => setOpen(!open)} className="md:hidden">
-					<MenuToggleIcon open={open} className="size-5" duration={300} />
-				</Button>
-			</nav>
+			<div className="container-section">
+				<div className="flex h-14 items-center justify-between md:h-16">
+					{/* Logo */}
+					<div className="flex-shrink-0">
+						<WordmarkIcon className="h-4 text-[#2563EB]" />
+					</div>
 
+					{/* Navigation Links - Pill on scroll */}
+					<nav
+						className={cn(
+							'hidden md:flex items-center transition-all duration-300 ease-out',
+							{
+								'bg-background/95 supports-[backdrop-filter]:bg-background/50 border-border border backdrop-blur-lg rounded-full px-6 py-2 shadow-lg':
+									scrolled && !open,
+								'gap-2': !scrolled,
+							},
+						)}
+					>
+						{links.map((link, i) => (
+							<Link 
+								key={i} 
+								className={buttonVariants({ 
+									variant: 'ghost', 
+									className: cn(
+										'text-sm font-medium transition-colors',
+										scrolled ? 'hover:bg-accent/50' : ''
+									) 
+								})} 
+								to={link.href}
+							>
+								{link.label}
+							</Link>
+						))}
+					</nav>
+
+					{/* CTA Button & Mobile Menu */}
+					<div className="flex items-center gap-4">
+						<Button className="hidden md:flex bg-[#2563EB] hover:bg-[#2563EB]/90 shadow-md">
+							Try it now
+						</Button>
+						<Button size="icon" variant="outline" onClick={() => setOpen(!open)} className="md:hidden">
+							<MenuToggleIcon open={open} className="size-5" duration={300} />
+						</Button>
+					</div>
+				</div>
+			</div>
+
+			{/* Mobile Menu */}
 			<div
 				className={cn(
 					'bg-background/90 fixed top-14 right-0 bottom-0 left-0 z-50 flex flex-col overflow-hidden border-y md:hidden',

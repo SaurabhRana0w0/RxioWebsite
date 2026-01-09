@@ -15,8 +15,8 @@ const Hero = () => {
         <div className="absolute top-20 right-20 w-72 h-72 bg-[#2563EB]/15 rounded-full blur-3xl animate-pulse-soft" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#2563EB]/15 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
 
-        <div className="container-section relative z-10 py-20 lg:py-32">
-          <div className="max-w-4xl">
+        <div className="container-section relative z-10 py-20 lg:py-32 flex flex-col items-center text-center">
+          <div className="max-w-4xl flex flex-col items-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
@@ -28,7 +28,7 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-8 animate-slide-up">
             Built on the Promise of{" "}
-            <span className="relative">
+            <span className="relative inline-block">
               Performance,
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
                 <path d="M2 10C50 2 150 2 198 10" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" />
@@ -61,17 +61,17 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 animate-slide-up animation-delay-300">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 animate-slide-up animation-delay-300">
             {[
               { icon: Shield, label: "Lifetime License", desc: "Pay once, own forever" },
               { icon: Zap, label: "Offline-First", desc: "No internet required" },
               { icon: TrendingUp, label: "Native Performance", desc: "Built with C++ & SQLite" },
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-3 text-foreground/90 py-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#2563EB]/10 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-[#2563EB]" />
+                  <div key={index} className="flex flex-col items-center gap-3 text-foreground/90 py-3">
+                  <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-1">
+                  <item.icon className="w-6 h-6 text-[#2563EB]" />
                 </div>
-                <div>
+                <div className="text-center">
                   <p className="font-semibold text-sm">{item.label}</p>
                   <p className="text-foreground/70 text-xs">{item.desc}</p>
                 </div>
