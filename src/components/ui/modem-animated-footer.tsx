@@ -142,17 +142,19 @@ export const Footer = ({
             </p>
 
             {/* RIGHT */}
-            <div className="flex items-center gap-2 text-muted-foreground text-base">
+          <div className="flex items-center gap-2 text-muted-foreground text-base">
+              <span>Made with</span>
+              <Heart className="w-4 h-4 fill-[#2563eb] text-[#2563eb]" />
+              <span>by</span>
               <a
-                href="https://portfolio.saurabhrana.me"
+                href="https://saurabhrana0w0.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium hover:text-foreground transition-colors"
+                className="font-medium hover:text-foreground transition"
               >
-                Saurabh Rana
+                SaurabhRana0w0
               </a>
             </div>
-
           </div>
         </div>
       </footer>
