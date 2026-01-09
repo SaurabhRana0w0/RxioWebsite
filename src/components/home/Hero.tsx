@@ -12,14 +12,14 @@ const Hero = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-[#2563EB]/15 rounded-full blur-3xl animate-pulse-soft" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#2563EB]/15 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/15 rounded-full blur-3xl animate-pulse-soft" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
 
       <div className="container-section relative z-10 flex flex-col items-center text-center">
         <div className="max-w-4xl flex flex-col items-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-14 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-foreground/90 text-sm font-medium">
               Launch Offer: First 20 users get lifetime license at ₹8,000
             </span>
@@ -31,7 +31,7 @@ const Hero = () => {
             <span className="relative inline-block">
               Performance,
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
-                <path d="M2 10C50 2 150 2 198 10" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" />
+                <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" className="text-primary" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </span>{" "}
             Growth, and Efficiency
@@ -46,13 +46,13 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-slide-up animation-delay-200">
-            <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white border-none h-14 px-8 text-lg rounded-xl shadow-lg shadow-blue-500/20">
+            <Button asChild variant="gradient" size="xl">
               <Link to="/download">
                 Try it now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="xl" className="h-14 px-8 text-lg rounded-xl border-2 hover:bg-slate-50">
+            <Button asChild variant="outline" size="xl">
               <Link to="/products">
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
@@ -68,8 +68,8 @@ const Hero = () => {
               { icon: TrendingUp, label: "Native Performance", desc: "Built with C++ & SQLite" },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center gap-3 text-foreground/90 py-3">
-                <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-1">
-                  <item.icon className="w-6 h-6 text-[#2563EB]" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-1">
+                  <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div className="text-center">
                   <p className="font-semibold text-sm">{item.label}</p>

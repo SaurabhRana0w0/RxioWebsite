@@ -21,16 +21,16 @@ const CTASection = () => {
             </p>
             
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild variant="accent" size="xl" className="bg-white text-[#2563eb] hover:bg-white/90">
+                <Button asChild variant="white" size="xl">
                   <Link to="/download">
-                    <Download className="w-5 h-5" />
+                    <Download className="w-5 h-5 mr-2" />
                     Download now
                   </Link>
                 </Button>
               <Button asChild variant="heroOutline" size="xl">
                 <Link to="/contact">
                   Contact Sales
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
             </div>
