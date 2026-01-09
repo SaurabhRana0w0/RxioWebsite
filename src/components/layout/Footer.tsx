@@ -92,11 +92,11 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-primary-foreground/60 text-sm">
-              © {currentYear} Rxio. All rights reserved.
-            </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              <p className="text-primary-foreground/60 text-sm">
+                © {currentYear} Rxio. All rights reserved.
+              </p>
               <div className="flex gap-6">
                 <Link
                   to="/privacy"
@@ -111,11 +111,11 @@ const Footer = () => {
                   Terms of Service
                 </Link>
               </div>
-              <div className="flex items-center gap-1.5 text-primary-foreground/60 text-sm">
-                <span>made with</span>
-                <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
-                <span>by saurabhrana0w0</span>
-              </div>
+            </div>
+            <div className="flex items-center gap-1.5 text-primary-foreground/60 text-sm">
+              <span>Made with</span>
+              <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+              <span>by SaurabhRana0w0</span>
             </div>
           </div>
         </div>
