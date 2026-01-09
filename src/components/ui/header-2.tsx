@@ -103,7 +103,7 @@ export function Header() {
 
 					{/* CTA Button & Mobile Menu */}
 					<div className="flex items-center gap-4">
-						<Button asChild className="hidden md:flex" variant="gradient">
+						<Button asChild className="hidden md:flex">
 							<Link to="/download">Try it now</Link>
 						</Button>
 						<Button size="icon" variant="outline" onClick={() => setOpen(!open)} className="md:hidden">
@@ -139,7 +139,7 @@ export function Header() {
 						))}
 					</div>
 					<div className="flex flex-col gap-2 pb-10">
-						<Button asChild className="w-full" variant="gradient" size="lg">
+						<Button asChild className="w-full" size="lg">
 							<Link to="/download" onClick={() => setOpen(false)}>Try it now</Link>
 						</Button>
 					</div>
