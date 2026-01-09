@@ -3,6 +3,7 @@ import { Footer } from "@/components/ui/modem-animated-footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check, Info, Shield, Zap, ArrowRight, HelpCircle } from "lucide-react";
+import { PricingCard } from "@/components/ui/pricing-card";
 
 const faqs = [
   {
@@ -47,81 +48,37 @@ const Pricing = () => {
               </p>
             </div>
 
-            {/* Pricing Cards */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Launch Offer */}
-              <div className="relative bg-white rounded-2xl p-8 shadow-xl border-2 border-[#2563EB]/20 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#2563EB]/5 rounded-full -mr-16 -mt-16 blur-2xl" />
-                <div className="absolute -top-3 left-8 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#2563EB] text-white text-sm font-semibold shadow-lg">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                  Launch Offer
-                </div>
-                
-                <div className="pt-6 relative z-10">
-                  <p className="text-muted-foreground text-sm mb-2 font-medium">First 20 Users Only</p>
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="font-display text-5xl font-bold text-[#2563EB]">₹8,000</span>
-                    <span className="text-muted-foreground line-through text-xl">₹20,000</span>
-                  </div>
-                  <p className="text-muted-foreground/70 text-sm mb-8 font-medium">One-time payment • Lifetime license</p>
-                  
-                  <ul className="space-y-4 mb-10">
-                    {[
+            {/* Pricing Card */}
+            <div className="max-w-6xl mx-auto">
+              <PricingCard
+                title="Launch Offer"
+                description="Special lifetime license for our first 20 users. One-time payment, no monthly fees."
+                price={8000}
+                originalPrice={20000}
+                currency="₹"
+                features={[
+                  {
+                    title: "Software & License",
+                    items: [
                       "Complete Rxio Pharma software",
                       "Lifetime ownership — no recurring fees",
                       "All core features included",
+                      "Regular updates & improvements",
+                    ],
+                  },
+                  {
+                    title: "Perks & Support",
+                    items: [
                       "1.5 years free cloud & premium features",
                       "Initial setup by Rxio support team",
-                      "Regular updates & improvements",
                       "Priority support access",
-                    ].map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3 text-foreground/90 font-medium">
-                        <Check className="w-5 h-5 text-[#2563EB] flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button asChild size="lg" className="w-full bg-[#2563EB] hover:bg-[#2563EB]/90 text-white shadow-lg shadow-blue-500/20 h-14 text-lg rounded-xl">
-                    <Link to="/download">Claim Launch Offer</Link>
-                  </Button>
-                  <p className="text-muted-foreground text-xs text-center mt-4">
-                    Limited to first 20 customers
-                  </p>
-                </div>
-              </div>
-
-              {/* Standard Price */}
-              <div className="bg-white rounded-2xl p-8 shadow-soft border border-border">
-                <p className="text-muted-foreground text-sm mb-2">Standard License</p>
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span className="font-display text-5xl font-bold text-foreground">₹20,000</span>
-                </div>
-                <p className="text-muted-foreground text-sm mb-8">One-time payment • Lifetime license</p>
-                
-                <ul className="space-y-4 mb-10">
-                  {[
-                    "Complete Rxio Pharma software",
-                    "Lifetime ownership — no recurring fees",
-                    "All core features included",
-                    "Initial setup by Rxio support team",
-                    "Regular updates & improvements",
-                    "Standard support access",
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3 text-foreground">
-                      <Check className="w-5 h-5 text-[#2563EB] flex-shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Button asChild variant="outline" size="lg" className="w-full h-14 text-lg rounded-xl border-2">
-                    <Link to="/download">Try it now</Link>
-                </Button>
-                <p className="text-muted-foreground text-xs text-center mt-4">
-                  Standard pricing after launch offer ends
-                </p>
-              </div>
+                      "Special 'Early Adopter' status",
+                    ],
+                  },
+                ]}
+                buttonText="Claim Launch Offer"
+                onButtonClick={() => window.location.href = '/download'}
+              />
             </div>
 
             {/* Cloud Add-on Note */}
