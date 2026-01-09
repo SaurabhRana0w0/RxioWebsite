@@ -39,7 +39,7 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-16 lg:pt-20">
+      <main>
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-subtle">
           <div className="container-section">

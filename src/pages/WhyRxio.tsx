@@ -6,7 +6,7 @@ const WhyRxio = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-16 lg:pt-20">
+      <main>
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
           <div className="absolute top-20 right-20 w-72 h-72 bg-[#2563EB]/5 rounded-full blur-3xl animate-pulse-soft" />
