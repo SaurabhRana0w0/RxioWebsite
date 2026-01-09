@@ -63,7 +63,7 @@ const Download = () => {
                   This app is available for all platforms: Linux, Mac, and Windows.
                 </p>
                 
-                <Button asChild variant="accent" size="xl" className="group">
+                  <Button asChild variant="white" size="xl" className="group">
                   <a href="#">
                     <DownloadIcon className="w-5 h-5 group-hover:animate-bounce" />
                     Download Now
