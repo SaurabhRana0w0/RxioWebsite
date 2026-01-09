@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Heart, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -96,19 +96,26 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm">
               © {currentYear} Rxio. All rights reserved.
             </p>
-            <div className="flex gap-6">
-              <Link
-                to="/privacy"
-                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to="/terms"
-                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm"
-              >
-                Terms of Service
-              </Link>
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              <div className="flex gap-6">
+                <Link
+                  to="/privacy"
+                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="/terms"
+                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm"
+                >
+                  Terms of Service
+                </Link>
+              </div>
+              <div className="flex items-center gap-1.5 text-primary-foreground/60 text-sm">
+                <span>made with</span>
+                <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+                <span>by saurabhrana0w0</span>
+              </div>
             </div>
           </div>
         </div>
