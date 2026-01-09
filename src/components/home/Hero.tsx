@@ -7,7 +7,7 @@ const Hero = () => {
   return (
       <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
         {/* Shader Background */}
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.06]">
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.04]">
           <ShaderAnimation />
         </div>
 
@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
 
         <div className="container-section relative z-10 py-20 lg:py-32">
-          <div className="max-w-4xl p-8 rounded-3xl backdrop-blur-md bg-white/40 border border-[#2563EB]/10 shadow-sm">
+          <div className="max-w-4xl p-8 rounded-3xl backdrop-blur-xl bg-white/60 border border-[#2563EB]/10 shadow-sm">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563EB]/10 backdrop-blur-md border border-[#2563EB]/20 mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />

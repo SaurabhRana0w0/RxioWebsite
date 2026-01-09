@@ -1,6 +1,29 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
-import { Check, Info, Shield, Zap, ArrowRight } from "lucide-react";
+import { Check, Info, Shield, Zap, ArrowRight, HelpCircle } from "lucide-react";
+
+const faqs = [
+  {
+    question: "Is it really a one-time payment?",
+    answer: "Yes. When you buy Rxio Pharma, you get a lifetime license. There are no monthly or yearly subscription fees to keep using the core software on your local system.",
+  },
+  {
+    question: "Do I get updates?",
+    answer: "Absolutely. We provide regular updates to improve performance, add new features, and ensure compatibility with the latest operating systems.",
+  },
+  {
+    question: "Will it work without internet?",
+    answer: "Yes, Rxio Pharma is built to be offline-first. Your inventory, billing, and patient records are stored locally on your system, and the software doesn't need internet to function.",
+  },
+  {
+    question: "Is setup and support included?",
+    answer: "Yes, our support team will help you with the initial setup and configuration to ensure everything is running smoothly. We also provide documentation and standard support for all users.",
+  },
+  {
+    question: "What are 'Cloud Features'?",
+    answer: "Cloud features are optional add-ons like remote analytics, cloud backup, and multi-device synchronization. These will be available in the future for a separate fee, but the core software will always remain offline-capable and subscription-free.",
+  },
+];
 
 const Pricing = () => {
   return (

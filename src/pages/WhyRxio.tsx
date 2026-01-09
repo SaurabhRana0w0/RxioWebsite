@@ -42,12 +42,12 @@ const WhyRxio = () => {
                     {reason.description}
                   </p>
                   <ul className="space-y-2">
-                    {reason.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="flex items-center gap-2 text-sm text-foreground">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                        {point}
-                      </li>
-                    ))}
+                      {reason.points.map((point, pointIndex) => (
+                        <li key={pointIndex} className="flex items-center gap-2 text-sm text-foreground">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                          {point}
+                        </li>
+                      ))}
                   </ul>
                 </div>
               ))}

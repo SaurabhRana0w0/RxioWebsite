@@ -11,6 +11,10 @@ export function Header() {
 
 	const links = [
 		{
+			label: 'Home',
+			href: '/',
+		},
+		{
 			label: 'Why Rxio',
 			href: '/why-rxio',
 		},

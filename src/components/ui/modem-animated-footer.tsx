@@ -2,10 +2,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  NotepadTextDashed,
   Twitter,
   Linkedin,
   Mail,
+  Heart,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -128,9 +128,24 @@ export const Footer = ({
             </div>
 
             <div className="mt-20 md:mt-24 flex flex-col gap-2 md:gap-1 items-center justify-center md:flex-row md:items-center md:justify-between px-4 md:px-0 relative z-10">
-            <p className="text-base text-muted-foreground text-center md:text-left">
-              ©{new Date().getFullYear()} {brandName}. All rights reserved.
-            </p>
+              <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                <p className="text-base text-muted-foreground text-center md:text-left">
+                  ©{new Date().getFullYear()} {brandName}. All rights reserved.
+                </p>
+                <div className="flex items-center gap-1 text-muted-foreground text-base">
+                  <span>Made with</span>
+                  <Heart className="w-4 h-4 fill-[#2563eb] text-[#2563eb]" />
+                  <span>by</span>
+                  <a 
+                    href="https://portfolio.saurabhrana.me" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-foreground transition-colors font-medium"
+                  >
+                    SaurabhRana0w0
+                  </a>
+                </div>
+              </div>
             {creatorName && creatorUrl && (
               <nav className="flex gap-4">
                 <a

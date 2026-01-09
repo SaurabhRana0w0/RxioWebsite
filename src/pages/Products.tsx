@@ -1,6 +1,39 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
-import { Check, Shield, Zap, TrendingUp, Monitor, ArrowRight } from "lucide-react";
+import { Check, Shield, Zap, TrendingUp, Monitor, ArrowRight, Sparkles, Package, ClipboardList, Clock, BarChart3, Receipt } from "lucide-react";
+
+const features = [
+  {
+    icon: Package,
+    title: "Inventory Management",
+    description: "Real-time tracking of stock levels, batch numbers, and automatic low-stock alerts.",
+  },
+  {
+    icon: Clock,
+    title: "Expiry Tracking",
+    description: "Automatic tracking of drug expiry dates with proactive alerts to minimize losses.",
+  },
+  {
+    icon: Receipt,
+    title: "GST-Ready Billing",
+    description: "Create professional GST-compliant bills and manage tax filings with ease.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Batch Management",
+    description: "Track medication by batch numbers for precise inventory control and recall management.",
+  },
+  {
+    icon: BarChart3,
+    title: "Sales Analytics",
+    description: "In-depth reporting and insights into your pharmacy's sales performance.",
+  },
+  {
+    icon: Zap,
+    title: "Offline Access",
+    description: "Run your entire business without an internet connection, with local data security.",
+  },
+];
 
 const Products = () => {
   return (

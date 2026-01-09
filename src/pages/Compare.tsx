@@ -1,6 +1,28 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
-import { Check, X, Shield, Zap, TrendingUp, HelpCircle } from "lucide-react";
+import { Check, X, Shield, Zap, TrendingUp, HelpCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const comparisonData = [
+  {
+    category: "Financials",
+    items: [
+      { feature: "License Type", rxio: "Lifetime", subscription: "Rented" },
+      { feature: "One-time Payment", rxio: true, subscription: false },
+      { feature: "Monthly/Yearly Fees", rxio: false, subscription: true },
+      { feature: "Long-term Cost", rxio: "Fixed", subscription: "Increasing" },
+    ],
+  },
+  {
+    category: "Technical",
+    items: [
+      { feature: "Offline Usage", rxio: true, subscription: "Often Limited" },
+      { feature: "Data Ownership", rxio: "Local & Private", subscription: "Cloud/Vendor Managed" },
+      { feature: "Performance", rxio: "Native Speed", subscription: "Browser/Web Speed" },
+      { feature: "Internet Dependency", rxio: "None", subscription: "High" },
+    ],
+  },
+];
 
 const Compare = () => {
   return (
