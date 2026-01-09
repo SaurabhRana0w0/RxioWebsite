@@ -105,23 +105,29 @@ export const Footer = ({
                 </div>
               )}
 
-              {navLinks.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-muted-foreground max-w-full px-4">
-                  {navLinks.map((link, index) => (
-                    <Link
-                      key={index}
-                      className="hover:text-foreground duration-300 hover:font-semibold"
-                      to={link.href}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
+                {navLinks.length > 0 && (
+                  <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-muted-foreground max-w-full px-4">
+                    {navLinks.map((link, index) => (
+                      <Link
+                        key={index}
+                        className="hover:text-foreground duration-300 hover:font-semibold"
+                        to={link.href}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
 
-          <div className="mt-20 md:mt-24 flex flex-col gap-2 md:gap-1 items-center justify-center md:flex-row md:items-center md:justify-between px-4 md:px-0">
+            <div className="absolute bottom-24 left-0 w-full flex justify-center pointer-events-none overflow-hidden select-none">
+              <h1 className="text-[12vw] sm:text-[15vw] md:text-[20vw] font-bold text-foreground/[0.03] leading-none uppercase tracking-tighter">
+                {brandName}
+              </h1>
+            </div>
+
+            <div className="mt-20 md:mt-24 flex flex-col gap-2 md:gap-1 items-center justify-center md:flex-row md:items-center md:justify-between px-4 md:px-0 relative z-10">
             <p className="text-base text-muted-foreground text-center md:text-left">
               ©{new Date().getFullYear()} {brandName}. All rights reserved.
             </p>

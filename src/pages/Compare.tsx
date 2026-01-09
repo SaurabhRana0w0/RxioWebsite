@@ -27,11 +27,11 @@ const Compare = () => {
               {/* Table Header */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="col-span-1"></div>
-                <div className="bg-gradient-hero rounded-t-xl p-4 text-center">
-                  <span className="font-display font-bold text-lg text-primary-foreground">Rxio</span>
-                  <p className="text-primary-foreground/70 text-xs mt-1">Lifetime License</p>
+                <div className="bg-[#2563EB] rounded-t-xl p-4 text-center shadow-lg">
+                  <span className="font-display font-bold text-lg text-white">Rxio</span>
+                  <p className="text-white/80 text-xs mt-1">Lifetime License</p>
                 </div>
-                <div className="bg-secondary rounded-t-xl p-4 text-center">
+                <div className="bg-slate-100 rounded-t-xl p-4 text-center border-x border-t border-border">
                   <span className="font-display font-semibold text-lg text-foreground">Subscription</span>
                   <p className="text-muted-foreground text-xs mt-1">Monthly/Yearly</p>
                 </div>

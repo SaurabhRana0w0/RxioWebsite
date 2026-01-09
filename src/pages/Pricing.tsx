@@ -25,19 +25,20 @@ const Pricing = () => {
             {/* Pricing Cards */}
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Launch Offer */}
-              <div className="relative bg-gradient-hero rounded-2xl p-8 shadow-glow">
-                <div className="absolute -top-3 left-8 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold">
-                  <Sparkles className="w-4 h-4" />
+              <div className="relative bg-white rounded-2xl p-8 shadow-xl border-2 border-[#2563EB]/20 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#2563EB]/5 rounded-full -mr-16 -mt-16 blur-2xl" />
+                <div className="absolute -top-3 left-8 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#2563EB] text-white text-sm font-semibold shadow-lg">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                   Launch Offer
                 </div>
                 
-                <div className="pt-6">
-                  <p className="text-primary-foreground/80 text-sm mb-2">First 20 Users Only</p>
+                <div className="pt-6 relative z-10">
+                  <p className="text-muted-foreground text-sm mb-2 font-medium">First 20 Users Only</p>
                   <div className="flex items-baseline gap-3 mb-2">
-                    <span className="font-display text-5xl font-bold text-primary-foreground">₹8,000</span>
-                    <span className="text-primary-foreground/60 line-through text-xl">₹20,000</span>
+                    <span className="font-display text-5xl font-bold text-[#2563EB]">₹8,000</span>
+                    <span className="text-muted-foreground line-through text-xl">₹20,000</span>
                   </div>
-                  <p className="text-primary-foreground/70 text-sm mb-8">One-time payment • Lifetime license</p>
+                  <p className="text-muted-foreground/70 text-sm mb-8 font-medium">One-time payment • Lifetime license</p>
                   
                   <ul className="space-y-4 mb-10">
                     {[
@@ -49,24 +50,24 @@ const Pricing = () => {
                       "Regular updates & improvements",
                       "Priority support access",
                     ].map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3 text-primary-foreground/90">
-                        <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <li key={index} className="flex items-start gap-3 text-foreground/90 font-medium">
+                        <Check className="w-5 h-5 text-[#2563EB] flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
-                  <Button asChild variant="accent" size="lg" className="w-full">
+                  <Button asChild size="lg" className="w-full bg-[#2563EB] hover:bg-[#2563EB]/90 text-white shadow-lg shadow-blue-500/20 h-14 text-lg rounded-xl">
                     <Link to="/download">Claim Launch Offer</Link>
                   </Button>
-                  <p className="text-primary-foreground/60 text-xs text-center mt-4">
+                  <p className="text-muted-foreground text-xs text-center mt-4">
                     Limited to first 20 customers
                   </p>
                 </div>
               </div>
 
               {/* Standard Price */}
-              <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
+              <div className="bg-white rounded-2xl p-8 shadow-soft border border-border">
                 <p className="text-muted-foreground text-sm mb-2">Standard License</p>
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-display text-5xl font-bold text-foreground">₹20,000</span>
@@ -83,13 +84,13 @@ const Pricing = () => {
                     "Standard support access",
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3 text-foreground">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-[#2563EB] flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <Button asChild variant="outline" size="lg" className="w-full">
+                <Button asChild variant="outline" size="lg" className="w-full h-14 text-lg rounded-xl border-2">
                   <Link to="/download">Get Started</Link>
                 </Button>
                 <p className="text-muted-foreground text-xs text-center mt-4">

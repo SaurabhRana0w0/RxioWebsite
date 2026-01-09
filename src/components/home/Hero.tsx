@@ -5,18 +5,18 @@ import { ShaderAnimation } from "@/components/ui/shader-animation";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
-      {/* Shader Background */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
-        <ShaderAnimation />
-      </div>
+      <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
+        {/* Shader Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.06]">
+          <ShaderAnimation />
+        </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-pulse-soft" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
+        {/* Floating Elements */}
+        <div className="absolute top-20 right-20 w-72 h-72 bg-[#2563EB]/5 rounded-full blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
 
-      <div className="container-section relative z-10 py-20 lg:py-32">
-        <div className="max-w-4xl p-8 rounded-3xl backdrop-blur-[2px] bg-white/30 border border-white/20 shadow-sm">
+        <div className="container-section relative z-10 py-20 lg:py-32">
+          <div className="max-w-4xl p-8 rounded-3xl backdrop-blur-md bg-white/40 border border-[#2563EB]/10 shadow-sm">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563EB]/10 backdrop-blur-md border border-[#2563EB]/20 mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />

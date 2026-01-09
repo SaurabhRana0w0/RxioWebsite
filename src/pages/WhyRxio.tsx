@@ -8,13 +8,14 @@ const WhyRxio = () => {
       <Header />
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
-        <section className="py-20 lg:py-32 bg-gradient-hero">
-          <div className="container-section">
+        <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+          <div className="absolute top-20 right-20 w-72 h-72 bg-[#2563EB]/5 rounded-full blur-3xl animate-pulse-soft" />
+          <div className="container-section relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-8">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8">
                 Why Choose Rxio?
               </h1>
-              <p className="text-xl text-primary-foreground/80 leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 In a world of endless subscriptions and cloud-dependent software, we chose a different path. 
                 Here's why businesses trust Rxio.
               </p>

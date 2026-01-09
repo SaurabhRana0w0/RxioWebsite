@@ -159,25 +159,26 @@ const Products = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 lg:py-32 bg-gradient-hero">
-          <div className="container-section">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-                Try Rxio Pharma Today
-              </h2>
-              <p className="text-xl text-primary-foreground/80 mb-10">
-                Download the free demo and explore all features. No credit card required.
-              </p>
-              <Button asChild variant="accent" size="xl">
-                <Link to="/download">
-                  Download Free Demo
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
+          {/* CTA Section */}
+          <section className="py-20 lg:py-32 bg-white border-y border-border relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl -mr-48 -mt-48" />
+            <div className="container-section relative z-10">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  Try Rxio Pharma Today
+                </h2>
+                <p className="text-xl text-muted-foreground mb-10">
+                  Download the free demo and explore all features. No credit card required.
+                </p>
+                <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white h-14 px-10 text-lg rounded-xl shadow-lg shadow-blue-500/20" size="xl">
+                  <Link to="/download">
+                    Download Free Demo
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
       </main>
       <Footer />
     </div>
