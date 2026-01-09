@@ -59,17 +59,17 @@ const Products = () => {
                   Manage your inventory, create GST-compliant bills, track batches and expiry dates, 
                   and run your pharmacy efficiently — all without needing internet.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild variant="accent" size="lg">
-                    <Link to="/download">
-                      Try Free Demo
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link to="/pricing">View Pricing</Link>
-                  </Button>
-                </div>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild variant="accent" size="lg">
+                      <Link to="/download">
+                        Download Now
+                        <ArrowRight className="w-5 h-5" />
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg">
+                      <Link to="/pricing">View Pricing</Link>
+                    </Button>
+                  </div>
               </div>
               
               {/* Product Visual */}
@@ -205,12 +205,12 @@ const Products = () => {
                 <p className="text-xl text-muted-foreground mb-10">
                   Download the free demo and explore all features. No credit card required.
                 </p>
-                <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white h-14 px-10 text-lg rounded-xl shadow-lg shadow-blue-500/20" size="xl">
-                  <Link to="/download">
-                    Download Free Demo
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </Button>
+                  <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white h-14 px-10 text-lg rounded-xl shadow-lg shadow-blue-500/20" size="xl">
+                    <Link to="/download">
+                      Download Now
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Link>
+                  </Button>
               </div>
             </div>
           </section>

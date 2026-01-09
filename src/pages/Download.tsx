@@ -75,9 +75,37 @@ const Download = () => {
                 </p>
             </div>
           </div>
-        </section>
-
-        {/* How It Works */}
+          </section>
+  
+          {/* OS Selection Section */}
+          <section className="py-16 bg-muted/30 border-y border-border">
+            <div className="container-section">
+              <div className="text-center max-w-2xl mx-auto mb-12">
+                <h2 className="font-display text-3xl font-bold text-foreground mb-4">Choose Your Operating System</h2>
+                <p className="text-muted-foreground">Select your platform to begin the download. Our installer supports all major desktop environments.</p>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                {[
+                  { name: "Windows", icon: "🪟", version: "v1.0 (64-bit)", ext: ".exe" },
+                  { name: "macOS", icon: "🍎", version: "v1.0 (Universal)", ext: ".dmg" },
+                  { name: "Linux", icon: "🐧", version: "v1.0 (AppImage)", ext: ".AppImage" },
+                ].map((os) => (
+                  <div key={os.name} className="bg-card border border-border p-8 rounded-2xl text-center hover:border-primary/50 transition-all hover:shadow-lg group">
+                    <div className="text-4xl mb-4">{os.icon}</div>
+                    <h3 className="font-display font-bold text-xl mb-1">{os.name}</h3>
+                    <p className="text-xs text-muted-foreground mb-6">{os.version}</p>
+                    <Button className="w-full bg-[#2563eb] hover:bg-[#2563eb]/90" asChild>
+                      <a href={`#download-${os.name.toLowerCase()}`}>
+                        Download {os.ext}
+                      </a>
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+  
+          {/* How It Works */}
         <section className="py-20 lg:py-32 bg-background">
           <div className="container-section">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -96,9 +124,9 @@ const Download = () => {
               {steps.map((step, index) => (
                 <div key={index} className="relative">
                     <div className="bg-card rounded-xl p-6 shadow-soft border border-border h-full">
-                      <span className="font-display text-4xl font-bold text-primary/40 mb-4 block">
-                        {step.number}
-                      </span>
+                        <span className="font-display text-4xl font-bold text-[#2563eb] mb-4 block">
+                          {step.number}
+                        </span>
                     <h3 className="font-display font-semibold text-lg text-foreground mb-3">
                       {step.title}
                     </h3>

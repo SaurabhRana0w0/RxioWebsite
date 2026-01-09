@@ -61,9 +61,9 @@ const ProductShowcase = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link to="/download">Try Free Demo</Link>
-              </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/download">Download Now</Link>
+                </Button>
             </div>
           </div>
 

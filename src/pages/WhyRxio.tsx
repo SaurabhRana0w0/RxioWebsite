@@ -95,12 +95,12 @@ const WhyRxio = () => {
                 Try Rxio Pharma free and experience the difference of software built for ownership.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link to="/download">
-                    Download Free Demo
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
+                  <Button asChild size="lg">
+                    <Link to="/download">
+                      Download Now
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/products">View Products</Link>
                 </Button>

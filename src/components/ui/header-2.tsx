@@ -70,7 +70,9 @@ export function Header() {
 				<div className="flex h-14 items-center justify-between md:h-20">
 					{/* Logo */}
 					<div className="flex-shrink-0">
-						<WordmarkIcon className="h-5 text-primary" />
+						<Link to="/" className="text-2xl font-bold text-[#2563eb] tracking-tight">
+							Rxio
+						</Link>
 					</div>
 
 					{/* Navigation Links - Pill on scroll */}
@@ -104,7 +106,7 @@ export function Header() {
 					{/* CTA Button & Mobile Menu */}
 					<div className="flex items-center gap-4">
 						<Button asChild className="hidden md:flex">
-							<Link to="/download">Try it now</Link>
+							<Link to="/download">Download Now</Link>
 						</Button>
 						<Button size="icon" variant="outline" onClick={() => setOpen(!open)} className="md:hidden">
 							<MenuToggleIcon open={open} className="size-5" duration={300} />
@@ -140,7 +142,7 @@ export function Header() {
 					</div>
 					<div className="flex flex-col gap-2 pb-10">
 						<Button asChild className="w-full" size="lg">
-							<Link to="/download" onClick={() => setOpen(false)}>Try it now</Link>
+							<Link to="/download" onClick={() => setOpen(false)}>Download Now</Link>
 						</Button>
 					</div>
 				</div>

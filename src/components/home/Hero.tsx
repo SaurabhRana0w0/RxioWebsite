@@ -44,14 +44,14 @@ const Hero = () => {
             and stays yours forever — with regular updates and long-term support included.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-slide-up animation-delay-200">
-            <Button asChild variant="gradient" size="xl">
-              <Link to="/download">
-                Try it now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-slide-up animation-delay-200">
+              <Button asChild variant="gradient" size="xl">
+                <Link to="/download">
+                  Download Now
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
             <Button asChild variant="outline" size="xl">
               <Link to="/products">
                 <Play className="w-5 h-5 mr-2" />

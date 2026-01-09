@@ -20,13 +20,13 @@ const CTASection = () => {
               No credit card required. No time limit on the trial.
             </p>
             
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild variant="white" size="xl">
-                  <Link to="/download">
-                    <Download className="w-5 h-5 mr-2" />
-                    Download now
-                  </Link>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button asChild variant="white" size="xl">
+                    <Link to="/download">
+                      <Download className="w-5 h-5 mr-2" />
+                      Download Now
+                    </Link>
+                  </Button>
               <Button asChild variant="heroOutline" size="xl">
                 <Link to="/contact">
                   Contact Sales
