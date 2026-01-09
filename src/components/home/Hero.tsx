@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-slide-up animation-delay-200">
               <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white border-none h-14 px-8 text-lg rounded-xl shadow-lg shadow-blue-500/20">
                 <Link to="/download">
-                  Try it now — Free Demo
+                  Try it now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
