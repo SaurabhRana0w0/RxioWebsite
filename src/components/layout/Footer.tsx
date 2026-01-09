@@ -26,7 +26,7 @@ const Footer = () => {
                   R
                 </span>
               </div>
-              <span className="font-display font-bold text-xl">Rxio</span>
+                <span className="font-display font-bold text-3xl">Rxio</span>
             </Link>
 
             <p className="text-primary-foreground/70 text-sm leading-relaxed">

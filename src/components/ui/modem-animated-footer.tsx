@@ -127,7 +127,7 @@ export const Footer = ({
 
         {/* BIG RXIO BACKGROUND TEXT */}
         <div className="absolute inset-x-0 bottom-16 md:bottom-20 flex justify-center pointer-events-none select-none">
-          <h1 className="text-[14vw] font-extrabold text-foreground/[0.03] tracking-tighter uppercase">
+            <h1 className="text-[24vw] font-extrabold text-foreground/[0.03] tracking-tighter uppercase">
             {brandName}
           </h1>
         </div>
