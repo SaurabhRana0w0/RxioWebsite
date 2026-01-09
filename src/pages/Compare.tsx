@@ -1,55 +1,11 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Check, X, ArrowRight } from "lucide-react";
-
-const comparisonData = [
-  {
-    category: "Pricing",
-    items: [
-      { feature: "One-time payment", rxio: true, subscription: false },
-      { feature: "Lifetime ownership", rxio: true, subscription: false },
-      { feature: "No monthly/yearly fees", rxio: true, subscription: false },
-      { feature: "Price increases over time", rxio: false, subscription: true },
-      { feature: "Feature restrictions by tier", rxio: false, subscription: true },
-    ],
-  },
-  {
-    category: "Functionality",
-    items: [
-      { feature: "Works offline", rxio: true, subscription: false },
-      { feature: "Data stored locally", rxio: true, subscription: false },
-      { feature: "No internet dependency", rxio: true, subscription: false },
-      { feature: "Fast, native performance", rxio: true, subscription: false },
-      { feature: "Cloud sync (optional)", rxio: "Coming soon", subscription: true },
-    ],
-  },
-  {
-    category: "Ownership & Control",
-    items: [
-      { feature: "You own the software", rxio: true, subscription: false },
-      { feature: "Your data stays private", rxio: true, subscription: false },
-      { feature: "Works after company closes", rxio: true, subscription: false },
-      { feature: "No vendor lock-in", rxio: true, subscription: false },
-      { feature: "Transfer between systems", rxio: true, subscription: false },
-    ],
-  },
-  {
-    category: "Support",
-    items: [
-      { feature: "Initial setup assistance", rxio: true, subscription: "Varies" },
-      { feature: "Regular updates included", rxio: true, subscription: true },
-      { feature: "Long-term support commitment", rxio: true, subscription: "Varies" },
-      { feature: "Direct support access", rxio: true, subscription: "Varies" },
-    ],
-  },
-];
+import { Header } from "@/components/ui/header-2";
+import { Footer } from "@/components/ui/modem-animated-footer";
+import { Check, X, Shield, Zap, TrendingUp, HelpCircle } from "lucide-react";
 
 const Compare = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-subtle">

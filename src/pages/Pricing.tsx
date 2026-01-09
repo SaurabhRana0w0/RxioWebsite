@@ -1,40 +1,11 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Check, Sparkles, HelpCircle } from "lucide-react";
-
-const faqs = [
-  {
-    question: "What does 'lifetime license' mean?",
-    answer: "When you purchase Rxio software, you own it forever. There are no monthly or yearly fees. You can use the software as long as you want, and all core updates are included.",
-  },
-  {
-    question: "What's included in the launch offer?",
-    answer: "The first 20 customers get the software for ₹8,000 (instead of ₹20,000) plus 1.5 years of free access to cloud and premium features when they become available.",
-  },
-  {
-    question: "Is the software really offline-first?",
-    answer: "Yes, the core software works completely without internet. All your data is stored locally. Cloud features (when available) are optional add-ons.",
-  },
-  {
-    question: "What about future updates?",
-    answer: "Regular updates, bug fixes, and feature improvements are included with your purchase. We're committed to maintaining the software for the long term.",
-  },
-  {
-    question: "How does setup work?",
-    answer: "After purchase, our support team will schedule a live session to help you set up the software on your system. This initial setup assistance is included in the price.",
-  },
-  {
-    question: "What are the cloud features?",
-    answer: "Cloud features (planned for 6-8 months after launch) will include multi-device sync, cloud backup, and advanced analytics. These will be optional add-ons valued at ₹6,000-₹8,000/year.",
-  },
-];
+import { Header } from "@/components/ui/header-2";
+import { Footer } from "@/components/ui/modem-animated-footer";
+import { Check, Info, Shield, Zap, ArrowRight } from "lucide-react";
 
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-subtle">

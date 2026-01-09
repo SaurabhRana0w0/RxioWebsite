@@ -5,7 +5,6 @@ import {
   NotepadTextDashed,
   Twitter,
   Linkedin,
-  Github,
   Mail,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -32,11 +31,39 @@ interface FooterProps {
   className?: string;
 }
 
+const defaultSocialLinks = [
+  {
+    icon: <Twitter className="w-6 h-6" />,
+    href: "https://twitter.com/rxio",
+    label: "Twitter",
+  },
+  {
+    icon: <Linkedin className="w-6 h-6" />,
+    href: "https://linkedin.com/company/rxio",
+    label: "LinkedIn",
+  },
+  {
+    icon: <Mail className="w-6 h-6" />,
+    href: "mailto:hello@rxio.com",
+    label: "Email",
+  },
+];
+
+const defaultNavLinks = [
+  { label: "Why Rxio", href: "/why-rxio" },
+  { label: "Products", href: "/products" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Download", href: "/download" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Compare", href: "/compare" },
+];
+
 export const Footer = ({
   brandName = "Rxio",
   brandDescription = "High-performance, offline-first software built for businesses that value ownership, stability, and long-term control.",
-  socialLinks = [],
-  navLinks = [],
+  socialLinks = defaultSocialLinks,
+  navLinks = defaultNavLinks,
   creatorName,
   creatorUrl,
   brandIcon,
@@ -112,32 +139,6 @@ export const Footer = ({
             )}
           </div>
         </div>
-
-        {/* Large background text */}
-        <div 
-          className="bg-gradient-to-b from-foreground/20 via-foreground/10 to-transparent bg-clip-text text-transparent leading-none absolute left-1/2 -translate-x-1/2 bottom-40 md:bottom-32 font-extrabold tracking-tighter pointer-events-none select-none text-center px-4"
-          style={{
-            fontSize: 'clamp(3rem, 12vw, 10rem)',
-            maxWidth: '95vw'
-          }}
-        >
-          {brandName.toUpperCase()}
-        </div>
-
-        {/* Bottom logo */}
-        <div className="absolute hover:border-foreground duration-400 drop-shadow-[0_0px_20px_rgba(0,0,0,0.5)] dark:drop-shadow-[0_0px_20px_rgba(255,255,255,0.3)] bottom-24 md:bottom-20 backdrop-blur-sm rounded-3xl bg-background/60 left-1/2 border-2 border-border flex items-center justify-center p-3 -translate-x-1/2 z-10">
-          <div className="w-12 sm:w-16 md:w-24 h-12 sm:h-16 md:h-24 bg-gradient-to-br from-[#2563EB] to-[#2563EB]/80 rounded-2xl flex items-center justify-center shadow-lg">
-            {brandIcon || (
-              <NotepadTextDashed className="w-8 sm:w-10 md:w-14 h-8 sm:h-10 md:h-14 text-background drop-shadow-lg" />
-            )}
-          </div>
-        </div>
-
-        {/* Bottom line */}
-        <div className="absolute bottom-32 sm:bottom-34 backdrop-blur-sm h-1 bg-gradient-to-r from-transparent via-border to-transparent w-full left-1/2 -translate-x-1/2"></div>
-
-        {/* Bottom shadow */}
-        <div className="bg-gradient-to-t from-background via-background/80 blur-[1em] to-background/40 absolute bottom-28 w-full h-24"></div>
       </footer>
     </section>
   );

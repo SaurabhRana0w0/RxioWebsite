@@ -1,74 +1,11 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { 
-  Package, 
-  Receipt, 
-  Calendar, 
-  BarChart3, 
-  Bell, 
-  HardDrive,
-  FileText,
-  ShoppingCart,
-  Users,
-  ArrowRight,
-  Check,
-  Sparkles
-} from "lucide-react";
-
-const features = [
-  {
-    icon: Package,
-    title: "Inventory Management",
-    description: "Track all your medicines, medical supplies, and products. Know what's in stock, what's running low, and what needs reordering.",
-  },
-  {
-    icon: Receipt,
-    title: "GST-Compliant Billing",
-    description: "Generate professional invoices that comply with Indian GST requirements. Automatic tax calculations and proper documentation.",
-  },
-  {
-    icon: Calendar,
-    title: "Batch & Expiry Tracking",
-    description: "Monitor batch numbers and expiry dates for all products. Get alerts before items expire to minimize losses.",
-  },
-  {
-    icon: ShoppingCart,
-    title: "Sales Management",
-    description: "Process sales quickly and efficiently. Maintain complete sales history with customer details and payment records.",
-  },
-  {
-    icon: FileText,
-    title: "Purchase Management",
-    description: "Track all purchases from suppliers. Maintain supplier records, purchase history, and payment tracking.",
-  },
-  {
-    icon: Bell,
-    title: "Stock Alerts",
-    description: "Automatic notifications when stock runs low or items approach expiry. Never miss a reorder point again.",
-  },
-  {
-    icon: BarChart3,
-    title: "Business Reports",
-    description: "Comprehensive reports on sales, stock value, profit margins, and more. Make data-driven decisions for your pharmacy.",
-  },
-  {
-    icon: Users,
-    title: "Customer Management",
-    description: "Maintain customer records, track purchase history, and build lasting relationships with your patients.",
-  },
-  {
-    icon: HardDrive,
-    title: "Offline Storage",
-    description: "All data stored locally in SQLite database. No internet required, no cloud dependency, complete data privacy.",
-  },
-];
+import { Header } from "@/components/ui/header-2";
+import { Footer } from "@/components/ui/modem-animated-footer";
+import { Check, Shield, Zap, TrendingUp, Monitor, ArrowRight } from "lucide-react";
 
 const Products = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-subtle">

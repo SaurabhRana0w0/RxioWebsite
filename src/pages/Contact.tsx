@@ -1,53 +1,12 @@
 import { useState } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Header } from "@/components/ui/header-2";
+import { Footer } from "@/components/ui/modem-animated-footer";
+import { Mail, Phone, MapPin, MessageSquare, Send } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24-48 hours.",
-    });
-
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-subtle">

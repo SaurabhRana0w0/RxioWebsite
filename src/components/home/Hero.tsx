@@ -7,19 +7,19 @@ const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
       {/* Shader Background */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
         <ShaderAnimation />
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-soft" />
+      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
 
       <div className="container-section relative z-10 py-20 lg:py-32">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl p-8 rounded-3xl backdrop-blur-[2px] bg-white/30 border border-white/20 shadow-sm">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 backdrop-blur-sm border border-primary/10 mb-8 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563EB]/10 backdrop-blur-md border border-[#2563EB]/20 mb-8 animate-fade-in">
+            <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
             <span className="text-foreground/90 text-sm font-medium">
               Launch Offer: First 20 users get lifetime license at ₹8,000
             </span>
@@ -31,14 +31,14 @@ const Hero = () => {
             <span className="relative">
               Performance,
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
-                <path d="M2 10C50 2 150 2 198 10" stroke="hsl(35, 92%, 50%)" strokeWidth="3" strokeLinecap="round" />
+                <path d="M2 10C50 2 150 2 198 10" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </span>{" "}
             Growth, and Efficiency
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-10 max-w-2xl animate-slide-up animation-delay-100">
+          <p className="text-lg md:text-xl text-foreground/90 leading-relaxed mb-10 max-w-2xl animate-slide-up animation-delay-100 font-medium">
             Rxio builds high-performance, offline-first software using native technologies for businesses across India. 
             We believe in lifetime ownership, not endless subscriptions. Our software runs on your system, works without internet, 
             and stays yours forever — with regular updates and long-term support included.
@@ -46,15 +46,15 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-slide-up animation-delay-200">
-            <Button asChild variant="accent" size="xl">
+            <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white border-none h-14 px-8 text-lg rounded-xl shadow-lg shadow-blue-500/20">
               <Link to="/download">
                 Try Now — Free Demo
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="xl">
+            <Button asChild variant="outline" size="xl" className="h-14 px-8 text-lg rounded-xl border-2 hover:bg-slate-50">
               <Link to="/products">
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5 mr-2" />
                 Watch Demo
               </Link>
             </Button>
@@ -67,13 +67,13 @@ const Hero = () => {
               { icon: Zap, label: "Offline-First", desc: "No internet required" },
               { icon: TrendingUp, label: "Native Performance", desc: "Built with C++ & SQLite" },
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 text-foreground/90">
-                <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-primary" />
+              <div key={index} className="flex items-center gap-3 text-foreground/90 bg-white/40 p-3 rounded-2xl border border-white/50 backdrop-blur-sm">
+                <div className="w-10 h-10 rounded-lg bg-[#2563EB]/10 flex items-center justify-center">
+                  <item.icon className="w-5 h-5 text-[#2563EB]" />
                 </div>
                 <div>
                   <p className="font-semibold text-sm">{item.label}</p>
-                  <p className="text-foreground/60 text-xs">{item.desc}</p>
+                  <p className="text-foreground/70 text-xs">{item.desc}</p>
                 </div>
               </div>
             ))}

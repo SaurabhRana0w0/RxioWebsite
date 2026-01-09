@@ -23,6 +23,18 @@ export function Header() {
 			href: '/pricing',
 		},
 		{
+			label: 'Compare',
+			href: '/compare',
+		},
+		{
+			label: 'About',
+			href: '/about',
+		},
+		{
+			label: 'Contact',
+			href: '/contact',
+		},
+		{
 			label: 'Download',
 			href: '/download',
 		},

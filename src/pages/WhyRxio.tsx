@@ -1,91 +1,11 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { 
-  Shield, 
-  Wifi, 
-  Zap, 
-  IndianRupee, 
-  Clock, 
-  Heart,
-  ArrowRight,
-  Check
-} from "lucide-react";
-
-const reasons = [
-  {
-    icon: Shield,
-    title: "True Ownership",
-    description: "When you buy Rxio software, you own it. No monthly payments, no subscription traps, no sudden price increases. Pay once and use it forever.",
-    points: [
-      "Lifetime license included",
-      "No recurring fees",
-      "Transfer between systems",
-      "Your data stays yours",
-    ],
-  },
-  {
-    icon: Wifi,
-    title: "Offline-First Design",
-    description: "Our software doesn't depend on internet connectivity. Your business operations continue smoothly even when the connection drops.",
-    points: [
-      "Works without internet",
-      "Local SQLite database",
-      "No cloud dependency",
-      "Instant data access",
-    ],
-  },
-  {
-    icon: Zap,
-    title: "Native Performance",
-    description: "Built with C++ and optimized for speed. No browser overhead, no electron bloat — just fast, responsive software that respects your time.",
-    points: [
-      "Built with C++",
-      "Instant startup",
-      "Low resource usage",
-      "Smooth operations",
-    ],
-  },
-  {
-    icon: IndianRupee,
-    title: "Fair Pricing",
-    description: "One transparent price for a lifetime of use. No hidden fees, no premium tiers to access basic features, no forced upgrades.",
-    points: [
-      "One-time payment",
-      "All features included",
-      "No upselling tactics",
-      "Clear, honest pricing",
-    ],
-  },
-  {
-    icon: Clock,
-    title: "Long-Term Support",
-    description: "We're committed to maintaining and improving our software for years to come. Regular updates are included in your purchase.",
-    points: [
-      "Regular updates",
-      "Bug fixes included",
-      "Feature improvements",
-      "Responsive support",
-    ],
-  },
-  {
-    icon: Heart,
-    title: "Built for Indian Businesses",
-    description: "Designed with the unique needs of Indian businesses in mind. GST compliance, local payment methods, and support that understands your market.",
-    points: [
-      "GST-compliant billing",
-      "Indian rupee pricing",
-      "Local support team",
-      "Market-specific features",
-    ],
-  },
-];
+import { Header } from "@/components/ui/header-2";
+import { Footer } from "@/components/ui/modem-animated-footer";
+import { Shield, Zap, TrendingUp, Heart, CheckCircle2, ArrowRight } from "lucide-react";
 
 const WhyRxio = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-hero">

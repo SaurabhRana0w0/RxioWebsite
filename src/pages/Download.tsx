@@ -1,44 +1,46 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/ui/header-2";
+import { Footer } from "@/components/ui/modem-animated-footer";
 import { Button } from "@/components/ui/button";
 import { 
-  Download, 
-  Monitor, 
+  Download as DownloadIcon, 
+  Shield, 
+  Zap, 
+  Info, 
   CheckCircle2, 
+  Monitor, 
   ArrowRight, 
-  Headphones,
-  Shield,
-  Clock
+  Clock, 
+  Headphones 
 } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "Download the Demo",
-    description: "Click the download button to get the Rxio Pharma demo installer. It's free and takes just a few minutes.",
+    title: "Download",
+    description: "Get the installer for Windows. No registration required."
   },
   {
     number: "02",
-    title: "Install & Explore",
-    description: "Run the installer and explore all features. The demo has no time limit — take your time to evaluate.",
+    title: "Install",
+    description: "Quick setup process on your local machine."
   },
   {
     number: "03",
-    title: "Purchase License",
-    description: "If you're satisfied, purchase a lifetime license. You can do this directly through our website or contact our team.",
+    title: "Explore",
+    description: "Test every feature with sample data."
   },
   {
     number: "04",
-    title: "Setup Assistance",
-    description: "Our support team will schedule a live session to help you set up the software with your actual data.",
-  },
+    title: "Purchase",
+    description: "Get a lifetime license when you're ready."
+  }
 ];
 
-const DownloadPage = () => {
+const Download = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-hero">
@@ -58,9 +60,11 @@ const DownloadPage = () => {
                 Try the complete software free. Explore every feature, no credit card required, no time limits.
               </p>
               
-              <Button variant="accent" size="xl" className="group">
-                <Download className="w-5 h-5 group-hover:animate-bounce" />
-                Download Free Demo
+              <Button asChild variant="accent" size="xl" className="group">
+                <a href="#">
+                  <DownloadIcon className="w-5 h-5 group-hover:animate-bounce" />
+                  Download Free Demo
+                </a>
               </Button>
               
               <p className="text-primary-foreground/60 text-sm mt-4">
@@ -212,4 +216,4 @@ const DownloadPage = () => {
   );
 };
 
-export default DownloadPage;
+export default Download;

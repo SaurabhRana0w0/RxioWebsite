@@ -5,42 +5,8 @@ import ValueProposition from "@/components/home/ValueProposition";
 import ProductShowcase from "@/components/home/ProductShowcase";
 import PricingPreview from "@/components/home/PricingPreview";
 import CTASection from "@/components/home/CTASection";
-import { Twitter, Linkedin, Github, Mail } from "lucide-react";
 
 const Index = () => {
-  const socialLinks = [
-    {
-      icon: <Twitter className="w-6 h-6" />,
-      href: "https://twitter.com/rxio",
-      label: "Twitter",
-    },
-    {
-      icon: <Linkedin className="w-6 h-6" />,
-      href: "https://linkedin.com/company/rxio",
-      label: "LinkedIn",
-    },
-    {
-      icon: <Github className="w-6 h-6" />,
-      href: "https://github.com/rxio",
-      label: "GitHub",
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      href: "mailto:hello@rxio.com",
-      label: "Email",
-    },
-  ];
-
-  const navLinks = [
-    { label: "Why Rxio", href: "/why-rxio" },
-    { label: "Products", href: "/products" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Download", href: "/download" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Compare", href: "/compare" },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -51,7 +17,7 @@ const Index = () => {
         <PricingPreview />
         <CTASection />
       </main>
-      <Footer socialLinks={socialLinks} navLinks={navLinks} />
+      <Footer />
     </div>
   );
 };
