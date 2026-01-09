@@ -85,8 +85,7 @@ export function Header() {
 							{link.label}
 						</Link>
 					))}
-					<Button variant="outline">Sign In</Button>
-					<Button className="bg-[#2563EB] hover:bg-[#2563EB]/90">Get Started</Button>
+					<Button className="bg-[#2563EB] hover:bg-[#2563EB]/90">Try it now</Button>
 				</div>
 				<Button size="icon" variant="outline" onClick={() => setOpen(!open)} className="md:hidden">
 					<MenuToggleIcon open={open} className="size-5" duration={300} />
@@ -122,10 +121,7 @@ export function Header() {
 						))}
 					</div>
 					<div className="flex flex-col gap-2">
-						<Button variant="outline" className="w-full">
-							Sign In
-						</Button>
-						<Button className="w-full bg-[#2563EB] hover:bg-[#2563EB]/90">Get Started</Button>
+						<Button className="w-full bg-[#2563EB] hover:bg-[#2563EB]/90">Try it now</Button>
 					</div>
 				</div>
 			</div>

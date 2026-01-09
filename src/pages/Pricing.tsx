@@ -114,7 +114,7 @@ const Pricing = () => {
                 </ul>
                 
                 <Button asChild variant="outline" size="lg" className="w-full h-14 text-lg rounded-xl border-2">
-                  <Link to="/download">Get Started</Link>
+                    <Link to="/download">Try it now</Link>
                 </Button>
                 <p className="text-muted-foreground text-xs text-center mt-4">
                   Standard pricing after launch offer ends
