@@ -19,15 +19,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           
           {/* Brand */}
-          <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-lg">
-                  R
-                </span>
-              </div>
-                <span className="font-display font-bold text-3xl">Rxio</span>
-            </Link>
+            <div className="space-y-4">
+              <Link to="/" className="flex items-center gap-2">
+                <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
+                  <span className="text-primary-foreground font-display font-bold text-lg">
+                    r
+                  </span>
+                </div>
+                  <span className="font-display font-bold text-3xl lowercase">rxio</span>
+              </Link>
 
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               High-performance, offline-first software built for businesses that

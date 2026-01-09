@@ -22,12 +22,12 @@ const Navbar = () => {
       <div className="container-section">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-gradient-hero flex items-center justify-center shadow-glow">
-              <span className="text-primary-foreground font-display font-bold text-lg">R</span>
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">Rxio</span>
-          </Link>
+            <Link to="/" className="flex items-center gap-2">
+              <div className="w-9 h-9 rounded-lg bg-gradient-hero flex items-center justify-center shadow-glow">
+                <span className="text-primary-foreground font-display font-bold text-lg">r</span>
+              </div>
+              <span className="font-display font-bold text-xl text-foreground lowercase">rxio</span>
+            </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
