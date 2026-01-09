@@ -5,7 +5,7 @@ import { ShaderAnimation } from "@/components/ui/shader-animation";
 
 const Hero = () => {
   return (
-      <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden font-satoshi">
         {/* Shader Background */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.04]">
           <ShaderAnimation />

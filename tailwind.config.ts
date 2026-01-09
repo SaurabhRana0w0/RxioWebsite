@@ -12,11 +12,12 @@ export default {
         "2xl": "1400px",
       },
     },
-    extend: {
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
-      },
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          display: ['Satoshi', 'Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+          satoshi: ['Satoshi', 'sans-serif'],
+        },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
