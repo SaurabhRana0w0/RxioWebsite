@@ -16,9 +16,9 @@ const Hero = () => {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl animate-pulse-soft animation-delay-200" />
 
         <div className="container-section relative z-10 py-20 lg:py-32">
-          <div className="max-w-4xl p-8 rounded-3xl backdrop-blur-xl bg-white/60 border border-[#2563EB]/10 shadow-sm">
+          <div className="max-w-4xl p-8 rounded-3xl bg-white/90 border border-[#2563EB]/10 shadow-sm">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563EB]/10 backdrop-blur-md border border-[#2563EB]/20 mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563EB]/10 border border-[#2563EB]/20 mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
             <span className="text-foreground/90 text-sm font-medium">
               Launch Offer: First 20 users get lifetime license at ₹8,000
@@ -66,8 +66,8 @@ const Hero = () => {
               { icon: Shield, label: "Lifetime License", desc: "Pay once, own forever" },
               { icon: Zap, label: "Offline-First", desc: "No internet required" },
               { icon: TrendingUp, label: "Native Performance", desc: "Built with C++ & SQLite" },
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 text-foreground/90 bg-white/40 p-3 rounded-2xl border border-white/50 backdrop-blur-sm">
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-3 text-foreground/90 bg-white/80 p-3 rounded-2xl border border-[#2563EB]/10">
                 <div className="w-10 h-10 rounded-lg bg-[#2563EB]/10 flex items-center justify-center">
                   <item.icon className="w-5 h-5 text-[#2563EB]" />
                 </div>
