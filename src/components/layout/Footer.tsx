@@ -43,27 +43,29 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Resources</h4>
-            <ul className="space-y-3">
-              {[
-                { name: "Pricing", path: "/pricing" },
-                { name: "Compare", path: "/compare" },
-                { name: "Download", path: "/download" },
-                { name: "Contact", path: "/contact" },
-              ].map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Resources */}
+            <div>
+              <h4 className="font-display font-semibold text-lg mb-4">Resources</h4>
+              <ul className="space-y-3">
+                {[
+                  { name: "Pricing", path: "/pricing" },
+                  { name: "Compare", path: "/compare" },
+                  { name: "Download", path: "/download" },
+                  { name: "Contact", path: "/contact" },
+                  { name: "Privacy Policy", path: "/privacy" },
+                  { name: "Terms of Service", path: "/terms" },
+                ].map((link) => (
+                  <li key={link.path}>
+                    <Link
+                      to={link.path}
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
           {/* Contact */}
           <div>
@@ -93,29 +95,13 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              <p className="text-primary-foreground/60 text-sm">
-                © {currentYear} Rxio. All rights reserved.
-              </p>
-              <div className="flex gap-6">
-                <Link
-                  to="/privacy"
-                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  to="/terms"
-                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm"
-                >
-                  Terms of Service
-                </Link>
-              </div>
-            </div>
+            <p className="text-primary-foreground/60 text-sm text-center md:text-left">
+              © {currentYear} Rxio. All rights reserved.
+            </p>
             <div className="flex items-center gap-1.5 text-primary-foreground/60 text-sm">
               <span>Made with</span>
               <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
-              <span>by SaurabhRana0w0</span>
+              <span>by Saurabh Rana</span>
             </div>
           </div>
         </div>
