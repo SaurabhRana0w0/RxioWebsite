@@ -125,13 +125,6 @@ export const Footer = ({
           </div>
         </div>
 
-        {/* BIG RXIO BACKGROUND TEXT */}
-        <div className="absolute inset-x-0 bottom-16 md:bottom-20 flex justify-center pointer-events-none select-none">
-            <h1 className="text-[24vw] font-extrabold text-foreground/[0.03] tracking-tighter uppercase">
-            {brandName}
-          </h1>
-        </div>
-
         {/* BOTTOM CREDIT BAR */}
         <div className="mt-16">
           <div className="max-w-7xl mx-auto px-6 pb-8">
@@ -159,6 +152,13 @@ export const Footer = ({
 
             </div>
           </div>
+        </div>
+
+        {/* BIG RXIO BACKGROUND TEXT */}
+        <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none select-none">
+            <h1 className="text-[24vw] font-extrabold text-foreground/[0.03] tracking-tighter uppercase leading-none">
+            {brandName}
+          </h1>
         </div>
 
       </footer>
