@@ -34,12 +34,18 @@ const App = () => {
       }
     };
 
+    const handleDragStart = (e: DragEvent) => {
+      e.preventDefault();
+    };
+
     document.addEventListener('contextmenu', handleContextMenu);
     document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('dragstart', handleDragStart);
 
     return () => {
       document.removeEventListener('contextmenu', handleContextMenu);
       document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('dragstart', handleDragStart);
     };
   }, []);
 
