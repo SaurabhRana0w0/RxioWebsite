@@ -54,7 +54,7 @@ const defaultSocialLinks: SocialLink[] = [
   },
   {
     icon: <Mail className="w-6 h-6" />,
-    href: "mailto:hello@rxio.online",
+    href: "mailto:hello@rxio.com",
     label: "Email",
   },
 ];
@@ -81,21 +81,23 @@ export const Footer = ({
 
   return (
     <section className={cn("relative w-full overflow-hidden", className)}>
-      <footer className="bg-background relative">
+      <footer className="bg-background mt-20 relative">
 
-        {/* MAIN FOOTER CONTENT */}
-        <div className="max-w-7xl mx-auto px-4 py-16">
+        {/* MAIN CONTAINER */}
+        <div className="max-w-7xl mx-auto min-h-[30rem] sm:min-h-[35rem] md:min-h-[40rem] relative p-4 py-10 flex flex-col justify-between">
+
+          {/* TOP CONTENT */}
           <div className="flex flex-col items-center text-center">
-            <h2 className="text-3xl font-bold text-foreground">
+            <h2 className="text-foreground text-3xl font-bold">
               {brandName}
             </h2>
 
-            <p className="mt-2 max-w-md text-muted-foreground font-medium">
+            <p className="mt-2 max-w-sm text-muted-foreground font-semibold">
               {brandDescription}
             </p>
 
             {/* SOCIAL ICONS */}
-            <div className="flex gap-5 mt-6">
+            <div className="flex mt-4 gap-5">
               {socialLinks.map((link, i) => (
                 <a
                   key={i}
@@ -103,7 +105,7 @@ export const Footer = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="text-muted-foreground hover:text-[#2563EB] transition"
+                  className="text-muted-foreground hover:text-[#2563eb] transition"
                 >
                   {link.icon}
                 </a>
@@ -111,7 +113,7 @@ export const Footer = ({
             </div>
 
             {/* NAV LINKS */}
-            <div className="flex flex-wrap justify-center gap-5 mt-8 text-sm font-medium text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm font-medium text-muted-foreground">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -123,45 +125,38 @@ export const Footer = ({
               ))}
             </div>
           </div>
-        </div>
 
-        {/* BOTTOM CREDIT BAR */}
-        <div className="mt-16">
-          <div className="max-w-7xl mx-auto px-6 pb-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          {/* BIG RXIO WATERMARK */}
+          <div className="absolute bottom-24 inset-x-0 flex justify-center pointer-events-none select-none">
+            <h1 className="text-[12vw] sm:text-[15vw] md:text-[20vw] font-bold text-foreground/[0.025] uppercase tracking-tighter">
+              {brandName}
+            </h1>
+          </div>
 
-              {/* LEFT */}
-              <p className="text-sm text-muted-foreground text-center md:text-left">
-                © {currentYear} {brandName}. All rights reserved.
-              </p>
+            {/* BOTTOM BAR */}
+          <div className="mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-4 relative z-10">
+            
+            {/* LEFT */}
+            <p className="text-base text-muted-foreground text-center md:text-left">
+              © {currentYear} {brandName}. All rights reserved.
+            </p>
 
-              {/* RIGHT – DEV CREDIT */}
-              <div className="flex items-center gap-2 text-base text-muted-foreground">
-                <span>Made with</span>
-                <Heart className="w-4 h-4 text-[#2563EB] fill-[#2563EB]" />
-                <span>by</span>
-                <a
-                  href="https://portfolio.saurabhrana.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold hover:text-foreground transition"
-                >
-                  Saurabh Rana
-                </a>
-              </div>
-
+            {/* RIGHT */}
+            <div className="flex items-center gap-2 text-muted-foreground text-base">
+              <a
+                href="https://portfolio.saurabhrana.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:text-foreground transition-colors"
+              >
+                Saurabh Rana
+              </a>
             </div>
+
           </div>
         </div>
-
-        {/* BIG RXIO BACKGROUND TEXT */}
-        <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none select-none">
-            <h1 className="text-[24vw] font-extrabold text-foreground/[0.03] tracking-tighter uppercase leading-none">
-            {brandName}
-          </h1>
-        </div>
-
       </footer>
     </section>
   );
 };
+

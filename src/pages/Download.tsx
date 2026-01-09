@@ -8,7 +8,6 @@ import {
   Zap, 
   Info, 
   CheckCircle2, 
-  Monitor, 
   ArrowRight, 
   Clock, 
   Headphones 
@@ -43,15 +42,14 @@ const Download = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="py-20 lg:py-32 bg-gradient-hero">
-          <div className="container-section">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8">
-                <Monitor className="w-4 h-4 text-primary-foreground" />
-                <span className="text-primary-foreground/90 text-sm font-medium">
-                    Multi-Platform Desktop Application
-                  </span>
-                </div>
+          <section className="py-20 lg:py-32 bg-gradient-hero">
+            <div className="container-section">
+              <div className="max-w-3xl mx-auto text-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8">
+                  <span className="text-primary-foreground/90 text-sm font-medium">
+                      Multi-Platform Desktop Application
+                    </span>
+                  </div>
                 
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
                   Download Rxio Pharma
