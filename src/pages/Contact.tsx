@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { SEO } from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -27,15 +28,15 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+
     toast({
       title: "Message Sent",
       description: "We've received your message and will get back to you soon.",
     });
-    
+
     setFormData({
       name: "",
       email: "",
@@ -48,6 +49,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Contact Rxio - Support & Sales"
+        description="Get in touch with Rxio's support and sales team. We are here to help you ownership your business software."
+        keywords="contact rxio, rxio support, pharmacy software support"
+      />
       <Header />
       <main>
         {/* Hero Section */}

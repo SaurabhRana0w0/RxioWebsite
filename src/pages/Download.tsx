@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
 import { Button } from "@/components/ui/button";
-import { 
-  Download as DownloadIcon, 
-  Shield, 
-  Zap, 
-  Info, 
-  CheckCircle2, 
-  ArrowRight, 
-  Clock, 
-  Headphones 
+import {
+  Download as DownloadIcon,
+  Shield,
+  Zap,
+  Info,
+  CheckCircle2,
+  ArrowRight,
+  Clock,
+  Headphones
 } from "lucide-react";
 
 const steps = [
@@ -39,71 +39,76 @@ const steps = [
 const Download = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Download Rxio - Start Your Free Trial"
+        description="Download Rxio Pharma for Windows, Mac, or Linux. Try the offline-first pharmacy management software for free."
+        keywords="download rxio, pharmacy software download, free trial pharmacy software, offline billing software download"
+      />
       <Header />
       <main>
         {/* Hero Section */}
-          <section className="py-20 lg:py-32 bg-gradient-hero">
-            <div className="container-section">
-              <div className="max-w-3xl mx-auto text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8">
-                  <span className="text-primary-foreground/90 text-sm font-medium">
-                      Multi-Platform Desktop Application
-                    </span>
-                  </div>
-                
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-                  Download Rxio Pharma
-                </h1>
-                <p className="text-xl text-primary-foreground/80 mb-4">
-                  Try the complete software free. Explore every feature, no credit card required, no time limits.
-                </p>
-                <p className="text-lg text-primary-foreground/70 mb-10 italic">
-                  This app is available for all platforms: Linux, Mac, and Windows.
-                </p>
-                
-                  <Button asChild variant="white" size="xl" className="group">
-                  <a href="#">
-                    <DownloadIcon className="w-5 h-5 group-hover:animate-bounce" />
-                    Download Now
-                  </a>
-                </Button>
-                
-                <p className="text-primary-foreground/60 text-sm mt-4">
-                  Version 1.0 • ~150 MB • Multi-platform support
-                </p>
+        <section className="py-20 lg:py-32 bg-gradient-hero">
+          <div className="container-section">
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8">
+                <span className="text-primary-foreground/90 text-sm font-medium">
+                  Multi-Platform Desktop Application
+                </span>
+              </div>
+
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
+                Download Rxio Pharma
+              </h1>
+              <p className="text-xl text-primary-foreground/80 mb-4">
+                Try the complete software free. Explore every feature, no credit card required, no time limits.
+              </p>
+              <p className="text-lg text-primary-foreground/70 mb-10 italic">
+                This app is available for all platforms: Linux, Mac, and Windows.
+              </p>
+
+              <Button asChild variant="white" size="xl" className="group">
+                <a href="#">
+                  <DownloadIcon className="w-5 h-5 group-hover:animate-bounce" />
+                  Download Now
+                </a>
+              </Button>
+
+              <p className="text-primary-foreground/60 text-sm mt-4">
+                Version 1.0 • ~150 MB • Multi-platform support
+              </p>
             </div>
           </div>
-          </section>
-  
-          {/* OS Selection Section */}
-          <section className="py-16 bg-muted/30 border-y border-border">
-            <div className="container-section">
-              <div className="text-center max-w-2xl mx-auto mb-12">
-                <h2 className="font-display text-3xl font-bold text-foreground mb-4">Choose Your Operating System</h2>
-                <p className="text-muted-foreground">Select your platform to begin the download. Our installer supports all major desktop environments.</p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                {[
-                  { name: "Windows", icon: "🪟", version: "v1.0 (64-bit)", ext: ".exe" },
-                  { name: "macOS", icon: "🍎", version: "v1.0 (Universal)", ext: ".dmg" },
-                  { name: "Linux", icon: "🐧", version: "v1.0 (AppImage)", ext: ".AppImage" },
-                ].map((os) => (
-                  <div key={os.name} className="bg-card border border-border p-8 rounded-2xl text-center hover:border-primary/50 transition-all hover:shadow-lg group">
-                    <div className="text-4xl mb-4">{os.icon}</div>
-                    <h3 className="font-display font-bold text-xl mb-1">{os.name}</h3>
-                    <p className="text-xs text-muted-foreground mb-6">{os.version}</p>
-                    <Button className="w-full bg-[#2563eb] hover:bg-[#2563eb]/90" asChild>
-                      <a href={`#download-${os.name.toLowerCase()}`}>
-                        Download {os.ext}
-                      </a>
-                    </Button>
-                  </div>
-                ))}
-              </div>
+        </section>
+
+        {/* OS Selection Section */}
+        <section className="py-16 bg-muted/30 border-y border-border">
+          <div className="container-section">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="font-display text-3xl font-bold text-foreground mb-4">Choose Your Operating System</h2>
+              <p className="text-muted-foreground">Select your platform to begin the download. Our installer supports all major desktop environments.</p>
             </div>
-          </section>
-  
-          {/* How It Works */}
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {[
+                { name: "Windows", icon: "🪟", version: "v1.0 (64-bit)", ext: ".exe" },
+                { name: "macOS", icon: "🍎", version: "v1.0 (Universal)", ext: ".dmg" },
+                { name: "Linux", icon: "🐧", version: "v1.0 (AppImage)", ext: ".AppImage" },
+              ].map((os) => (
+                <div key={os.name} className="bg-card border border-border p-8 rounded-2xl text-center hover:border-primary/50 transition-all hover:shadow-lg group">
+                  <div className="text-4xl mb-4">{os.icon}</div>
+                  <h3 className="font-display font-bold text-xl mb-1">{os.name}</h3>
+                  <p className="text-xs text-muted-foreground mb-6">{os.version}</p>
+                  <Button className="w-full bg-[#2563eb] hover:bg-[#2563eb]/90" asChild>
+                    <a href={`#download-${os.name.toLowerCase()}`}>
+                      Download {os.ext}
+                    </a>
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
         <section className="py-20 lg:py-32 bg-background">
           <div className="container-section">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -121,10 +126,10 @@ const Download = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {steps.map((step, index) => (
                 <div key={index} className="relative">
-                    <div className="bg-card rounded-xl p-6 shadow-soft border border-border h-full">
-                        <span className="font-display text-4xl font-bold text-[#2563eb] mb-4 block">
-                          {step.number}
-                        </span>
+                  <div className="bg-card rounded-xl p-6 shadow-soft border border-border h-full">
+                    <span className="font-display text-4xl font-bold text-[#2563eb] mb-4 block">
+                      {step.number}
+                    </span>
                     <h3 className="font-display font-semibold text-lg text-foreground mb-3">
                       {step.title}
                     </h3>
@@ -150,10 +155,10 @@ const Download = () => {
                   What's in the Demo?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  The demo includes all features of the full software. The only limitation is data capacity — 
+                  The demo includes all features of the full software. The only limitation is data capacity —
                   you can add up to 100 products and 50 transactions to test the system.
                 </p>
-                
+
                 <ul className="space-y-4 mb-10">
                   {[
                     "Full inventory management",
@@ -170,7 +175,7 @@ const Download = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Button asChild size="lg">
                   <Link to="/products">
                     View All Features
@@ -178,7 +183,7 @@ const Download = () => {
                   </Link>
                 </Button>
               </div>
-              
+
               <div className="grid gap-6">
                 {[
                   {
@@ -225,7 +230,7 @@ const Download = () => {
                 Ready to Purchase?
               </h2>
               <p className="text-lg text-muted-foreground mb-10">
-                After trying the demo, you can purchase a lifetime license. Our team will help you 
+                After trying the demo, you can purchase a lifetime license. Our team will help you
                 migrate your demo data and set up the full version.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

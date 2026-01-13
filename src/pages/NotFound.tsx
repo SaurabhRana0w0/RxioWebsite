@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -13,6 +14,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Page Not Found - Rxio" />
       <Header />
       <main className="flex min-h-[70vh] items-center justify-center">
         <div className="text-center px-4">

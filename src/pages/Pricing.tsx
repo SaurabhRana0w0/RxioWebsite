@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check, Info, Shield, Zap, ArrowRight, HelpCircle } from "lucide-react";
 import { PricingCard } from "@/components/ui/pricing-card";
+import { SEO } from "@/components/SEO";
 
 const faqs = [
   {
@@ -31,6 +32,11 @@ const faqs = [
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Rxio Pricing - Lifetime License, No Hidden Fees"
+        description="Transparent pricing for Rxio Pharma software. Pay once for a lifetime license. No monthly subscriptions, no hidden costs."
+        keywords="rxio pricing, pharmacy software price, lifetime license cost, no subscription billing software"
+      />
       <Header />
       <main>
         {/* Hero Section */}
@@ -88,8 +94,8 @@ const Pricing = () => {
                   Cloud Features (Coming Soon)
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Optional cloud features including multi-device sync, cloud backup, and advanced analytics 
-                  will be available 6-8 months after launch. Value: ₹6,000-₹8,000/year. Launch offer customers 
+                  Optional cloud features including multi-device sync, cloud backup, and advanced analytics
+                  will be available 6-8 months after launch. Value: ₹6,000-₹8,000/year. Launch offer customers
                   get 1.5 years free. Cloud is always optional — your software works perfectly offline.
                 </p>
               </div>

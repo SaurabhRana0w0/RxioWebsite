@@ -1,12 +1,18 @@
 import { Header } from "@/components/ui/header-2";
 import { Footer } from "@/components/ui/modem-animated-footer";
 import { Target, Eye, Heart } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="About Rxio - Building Lifetime-Licensed Software"
+        description="Rxio builds native, offline-first software for Indian businesses. We believe in ownership, performance, and reliability."
+        keywords="about rxio, software company India, lifetime license, offline-first software"
+      />
       <Header />
-        <main>
+      <main>
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-subtle">
           <div className="container-section">
@@ -19,7 +25,7 @@ const About = () => {
                 <span className="text-gradient-primary">Businesses Own</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                We create high-performance, offline-first software using native technologies 
+                We create high-performance, offline-first software using native technologies
                 for businesses that value stability, control, and true ownership.
               </p>
             </div>
@@ -35,18 +41,18 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Rxio was founded on a simple belief: businesses deserve software they can truly own. 
-                  In an era of endless subscriptions and cloud dependencies, we chose a different path — 
-                  building native, offline-first applications that work reliably, perform exceptionally, 
+                  Rxio was founded on a simple belief: businesses deserve software they can truly own.
+                  In an era of endless subscriptions and cloud dependencies, we chose a different path —
+                  building native, offline-first applications that work reliably, perform exceptionally,
                   and belong to the people who buy them.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We use technologies like C++ and SQLite not because they're trendy, but because 
-                  they deliver real performance and reliability. Our software runs on your hardware, 
+                  We use technologies like C++ and SQLite not because they're trendy, but because
+                  they deliver real performance and reliability. Our software runs on your hardware,
                   stores data locally, and doesn't stop working when the internet goes down.
                 </p>
               </div>
-              
+
               <div className="grid gap-6">
                 {[
                   {
@@ -93,9 +99,9 @@ const About = () => {
                 A Company in Its Early Days
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Rxio is a young company currently under registration in India. While we're just 
-                getting started, our commitment to quality and customer ownership is unwavering. 
-                We're building products we believe in, and we're excited to grow alongside the 
+                Rxio is a young company currently under registration in India. While we're just
+                getting started, our commitment to quality and customer ownership is unwavering.
+                We're building products we believe in, and we're excited to grow alongside the
                 businesses we serve.
               </p>
               <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-light text-primary font-medium">

@@ -3,6 +3,7 @@ import { Footer } from "@/components/ui/modem-animated-footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Shield, Zap, TrendingUp, Heart, CheckCircle2, ArrowRight } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const reasons = [
   {
@@ -34,6 +35,11 @@ const reasons = [
 const WhyRxio = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Why Choose Rxio? - No Subscriptions, Faster Performance"
+        description="Choose Rxio for true software ownership. No monthly fees, works offline, native performance, and built for Indian businesses."
+        keywords="why rxio, no subscription software, offline software, fast pharmacy software"
+      />
       <Header />
       <main>
         {/* Hero Section */}
@@ -45,7 +51,7 @@ const WhyRxio = () => {
                 Why Choose Rxio?
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                In a world of endless subscriptions and cloud-dependent software, we chose a different path. 
+                In a world of endless subscriptions and cloud-dependent software, we chose a different path.
                 Here's why businesses trust Rxio.
               </p>
             </div>
@@ -71,12 +77,12 @@ const WhyRxio = () => {
                     {reason.description}
                   </p>
                   <ul className="space-y-2">
-                      {reason.points.map((point, pointIndex) => (
-                        <li key={pointIndex} className="flex items-center gap-2 text-sm text-foreground">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                          {point}
-                        </li>
-                      ))}
+                    {reason.points.map((point, pointIndex) => (
+                      <li key={pointIndex} className="flex items-center gap-2 text-sm text-foreground">
+                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        {point}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -95,12 +101,12 @@ const WhyRxio = () => {
                 Try Rxio Pharma free and experience the difference of software built for ownership.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg">
-                    <Link to="/download">
-                      Download Now
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </Button>
+                <Button asChild size="lg">
+                  <Link to="/download">
+                    Download Now
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/products">View Products</Link>
                 </Button>

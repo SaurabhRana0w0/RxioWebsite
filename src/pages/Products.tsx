@@ -3,6 +3,7 @@ import { Footer } from "@/components/ui/modem-animated-footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check, Shield, Zap, TrendingUp, Monitor, ArrowRight, Sparkles, Package, ClipboardList, Clock, BarChart3, Receipt } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const features = [
   {
@@ -40,6 +41,11 @@ const features = [
 const Products = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Rxio Products - Pharma & Business Solutions"
+        description="Explore Rxio's range of lifetime-licensed software. Rxio Pharma offers inventory management, billing, and accounting for pharmacies."
+        keywords="rxio products, rxio pharma, pharmacy software features, gst billing features"
+      />
       <Header />
       <main>
         {/* Hero Section */}
@@ -55,23 +61,23 @@ const Products = () => {
                   Rxio Pharma
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  Complete pharmacy management software built for Indian pharmacy owners. 
-                  Manage your inventory, create GST-compliant bills, track batches and expiry dates, 
+                  Complete pharmacy management software built for Indian pharmacy owners.
+                  Manage your inventory, create GST-compliant bills, track batches and expiry dates,
                   and run your pharmacy efficiently — all without needing internet.
                 </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild variant="accent" size="lg">
-                      <Link to="/download">
-                        Download Now
-                        <ArrowRight className="w-5 h-5" />
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" size="lg">
-                      <Link to="/pricing">View Pricing</Link>
-                    </Button>
-                  </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button asChild variant="accent" size="lg">
+                    <Link to="/download">
+                      Download Now
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg">
+                    <Link to="/pricing">View Pricing</Link>
+                  </Button>
+                </div>
               </div>
-              
+
               {/* Product Visual */}
               <div className="relative">
                 <div className="bg-gradient-hero rounded-2xl p-8 shadow-floating">
@@ -85,7 +91,7 @@ const Products = () => {
                         <span className="text-xs text-muted-foreground">Desktop Application</span>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-3 bg-secondary rounded-lg">
                         <span className="text-sm text-foreground">Total Products</span>
@@ -149,10 +155,10 @@ const Products = () => {
                   Built for Performance & Reliability
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Rxio Pharma is a native desktop application built with performance-first technologies. 
+                  Rxio Pharma is a native desktop application built with performance-first technologies.
                   It runs directly on your Windows system without browser overhead or cloud dependencies.
                 </p>
-                
+
                 <ul className="space-y-4">
                   {[
                     "Native C++ application for maximum performance",
@@ -169,7 +175,7 @@ const Products = () => {
                   ))}
                 </ul>
               </div>
-              
+
               <div className="bg-card rounded-2xl p-8 shadow-elevated border border-border">
                 <h3 className="font-display font-semibold text-xl text-foreground mb-6">
                   System Requirements
@@ -194,26 +200,26 @@ const Products = () => {
           </div>
         </section>
 
-          {/* CTA Section */}
-          <section className="py-20 lg:py-32 bg-white border-y border-border relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl -mr-48 -mt-48" />
-            <div className="container-section relative z-10">
-              <div className="max-w-3xl mx-auto text-center">
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  Try Rxio Pharma Today
-                </h2>
-                <p className="text-xl text-muted-foreground mb-10">
-                  Download the free demo and explore all features. No credit card required.
-                </p>
-                  <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white h-14 px-10 text-lg rounded-xl shadow-lg shadow-blue-500/20" size="xl">
-                    <Link to="/download">
-                      Download Now
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Link>
-                  </Button>
-              </div>
+        {/* CTA Section */}
+        <section className="py-20 lg:py-32 bg-white border-y border-border relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl -mr-48 -mt-48" />
+          <div className="container-section relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Try Rxio Pharma Today
+              </h2>
+              <p className="text-xl text-muted-foreground mb-10">
+                Download the free demo and explore all features. No credit card required.
+              </p>
+              <Button asChild className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white h-14 px-10 text-lg rounded-xl shadow-lg shadow-blue-500/20" size="xl">
+                <Link to="/download">
+                  Download Now
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
             </div>
-          </section>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

@@ -39,19 +39,19 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-foreground/90 leading-relaxed mb-10 max-w-2xl animate-slide-up animation-delay-100 font-medium">
-            Rxio builds high-performance, offline-first software using native technologies for businesses across India. 
-            We believe in lifetime ownership, not endless subscriptions. Our software runs on your system, works without internet, 
+            Rxio builds high-performance, offline-first software using native technologies for businesses across India.
+            We believe in lifetime ownership, not endless subscriptions. Our software runs on your system, works without internet,
             and stays yours forever — with regular updates and long-term support included.
           </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-slide-up animation-delay-200">
-              <Button asChild variant="gradient" size="xl">
-                <Link to="/download">
-                  Download Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-slide-up animation-delay-200">
+            <Button asChild variant="gradient" size="xl">
+              <Link to="/download">
+                Download Now
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
             <Button asChild variant="outline" size="xl">
               <Link to="/products">
                 <Play className="w-5 h-5 mr-2" />

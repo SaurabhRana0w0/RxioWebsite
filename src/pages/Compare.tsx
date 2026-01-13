@@ -3,6 +3,7 @@ import { Footer } from "@/components/ui/modem-animated-footer";
 import { Link } from "react-router-dom";
 import { Check, X, Shield, Zap, TrendingUp, HelpCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const comparisonData = [
   {
@@ -28,6 +29,11 @@ const comparisonData = [
 const Compare = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Compare Rxio vs Competitors - Ownership vs Renting"
+        description="See why Rxio is better than subscription-based software. Compare costs, features, and ownership models."
+        keywords="rxio vs competitors, lifetime license vs subscription, software comparison, pharmacy software comparison"
+      />
       <Header />
       <main>
         {/* Hero Section */}
@@ -70,9 +76,8 @@ const Compare = () => {
                     {category.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
-                        className={`grid grid-cols-3 gap-4 p-4 ${
-                          itemIndex !== category.items.length - 1 ? "border-b border-border" : ""
-                        }`}
+                        className={`grid grid-cols-3 gap-4 p-4 ${itemIndex !== category.items.length - 1 ? "border-b border-border" : ""
+                          }`}
                       >
                         <div className="text-foreground text-sm">{item.feature}</div>
                         <div className="flex justify-center">
